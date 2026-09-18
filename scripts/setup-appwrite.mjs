@@ -102,5 +102,18 @@ async function setup() {
 }
 
 setup().catch((err) => {
-  console.error("❌ Terjadi kesalahan saat setup Appwrite:", err.message);
+  console.error("\n❌ Terjadi kesalahan saat setup Appwrite:", err.message);
+  if (err.message && err.message.includes("missing scopes")) {
+    console.error("\n⚠️  PENYEBAB: API Key Appwrite Anda belum memiliki izin (scopes) yang lengkap.");
+    console.error("👉 Cara memperbaiki di Appwrite Console:");
+    console.error("   1. Buka console: https://cloud.appwrite.io/console/project-6aad4f19003a342d8e87");
+    console.error("   2. Masuk ke menu 'Settings' -> 'API Keys'");
+    console.error("   3. Klik API Key Anda (atau buat API Key baru)");
+    console.error("   4. Centang izin berikut:");
+    console.error("      - Collections (collections.read, collections.write)");
+    console.error("      - Documents (documents.read, documents.write)");
+    console.error("      - Buckets / Files (files.read, files.write, buckets.read, buckets.write)");
+    console.error("      - Databases (databases.read, databases.write)");
+    console.error("   5. Klik 'Update' / 'Save' lalu jalankan kembali skrip ini.");
+  }
 });
