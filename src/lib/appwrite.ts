@@ -5,7 +5,7 @@ import { talents, sanggars, opportunities, portfolioItems, Talent } from "@/data
 const client = new Client();
 
 const endpoint = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || "https://cloud.appwrite.io/v1";
-const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT || "wayangid-salatiga";
+const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT || "6aad4f19003a342d8e87";
 
 client.setEndpoint(endpoint).setProject(projectId);
 
