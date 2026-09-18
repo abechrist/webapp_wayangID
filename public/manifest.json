@@ -1,0 +1,24 @@
+{
+  "name": "WAYANG ID — Ekosistem Talenta Dalang Muda Salatiga",
+  "short_name": "WAYANG ID",
+  "description": "Platform ekosistem talenta dalang muda Kota Salatiga untuk menemukan, mengenali, dan mengembangkan potensi seni pedalangan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f131d",
+  "theme_color": "#ffd56d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/stitch-images/42-801802d3c697.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/stitch-images/42-801802d3c697.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

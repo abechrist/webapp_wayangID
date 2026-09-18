@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","primary-fixed":"#ffdf97","on-tertiary-container":"#00583b","on-secondary-container":"#ff9a84","inverse-primary":"#775a00","surface-container-lowest":"#0a0e18","tertiary-fixed":"#6ffbbe","on-primary-container":"#614900","surface-bright":"#353944","secondary":"#ffb4a4","surface-dim":"#0f131d","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#891e07","surface-container-high":"#262a35","outline":"#9a907c","primary-fixed-dim":"#eec14a","surface":"#0f131d","surface-container-low":"#171b26","primary-container":"#e5b842","on-error":"#690005","error-container":"#93000a","on-tertiary-fixed-variant":"#005236","surface-tint":"#eec14a","secondary-fixed-dim":"#ffb4a4","primary":"#ffd56d","surface-container-highest":"#313540","secondary-container":"#891e07","background":"#0f131d","tertiary":"#65f2b5","on-tertiary-fixed":"#002113","on-primary-fixed-variant":"#5a4400","on-secondary":"#640d00","on-secondary-fixed":"#3e0500","surface-container":"#1c1f2a","on-surface-variant":"#d1c5af","tertiary-fixed-dim":"#4edea3","on-primary":"#3e2e00","on-tertiary":"#003824","on-background":"#dfe2f1","surface-variant":"#313540","on-primary-fixed":"#251a00","secondary-fixed":"#ffdad3","inverse-surface":"#dfe2f1","outline-variant":"#4e4635","tertiary-container":"#43d59a","error":"#ffb4ab"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-sm":"1rem","space-xl":"2.5rem","margin":"2rem","space-sm":"0.5rem","margin-sm":"1rem","space-md":"1rem","gutter":"1.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["Plus Jakarta Sans"],"display-md-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"display-md":["Playfair Display"],"headline-md":["Playfair Display"],"headline-lg":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}],"display-md-mobile":["28px",{lineHeight:"36px",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",fontWeight:"600"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.04em",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-md":["40px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"500"}],"headline-lg":["32px",{lineHeight:"40px",fontWeight:"600"}],"title-lg":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter max-w-[1400px] mx-auto flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><img alt="Modern minimalist geometric Gunungan Wayang logo emblem with stylized ID lettermark, sleek golden bronze lines, vector SVG silhouette, flat luxury heritage aesthetic, transparent background. Design context: - Primary color: #e5b842
+- Font: playfairDisplay
+- Mode: dark
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIJLhop6TG2cmvgqapG0-nmeNn2g2ZjP9Xzqv4ujF4_N5n8zA0N6_iWEvTXM3SzpM4H9OArKLOsSWxn02z8TjUeC-HONYiLB0Z7ICgj3XkHyVzmbPC4EGEMS4Aow5wzRr0uLaGTicZphQ_lXf1n5VvNAAb-NgwBabFeXHpmOkbcvqEAU27-XKOZPKWGB7sNrDX5RuFDMA2B5Gv4HziCLkLR-X4vyGzEobWVMXQ5NNkA7CLuWhmXGG0hg"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">WAYANG ID</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-0.5">Salatiga Youth Puppetry</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/60 backdrop-blur-md" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-[0_0_16px_0_rgba(229,184,66,0.18)]"><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="beranda" href="#">Beranda</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="peta-dan-talenta" href="#">Peta &amp; Talenta</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="showcase-pagelaran" href="#">Showcase Pagelaran</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="bursa-peluang" href="#">Bursa Peluang</a><a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-[0_0_16px_0_rgba(229,184,66,0.18)]" data-path="sanggar-dan-mitra" href="#">Sanggar &amp; Mitra</a><a class="font-label-md text-label-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="portal-mentor-dan-mitra" href="#">Portal Mentor/Mitra</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center bg-surface-container-lowest/80 rounded-full px-space-md py-1.5 shadow-[inset_0_1px_3px_rgba(0,0,0,0.4)] focus-within:ring-1 focus-within:ring-primary-container"><span class="material-symbols-outlined text-outline text-[18px] mr-space-sm">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-44 lg:w-56" placeholder="Cari dalang, sanggar, lakon..." type="text"/></div><button class="relative p-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Nyi Inaz Fairoza</span><span class="font-label-sm text-label-sm text-primary font-normal leading-tight">Dalang Remaja Putri</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_0_12px_rgba(229,184,66,0.3)]" src="https://lh3.googleusercontent.com/aida/AEtjO1X4sbfmLSuposvoVU_Q8j0PiO31EtaXgBtjuVgF2AKgpURBLZ8K_BNKLPq5955AN9t1XkTCObwljXJrm25LMo8YlKxgAO_Upg8hA_FyTcMk2i6y0WXlWHUdWQgYI3llmJ3x3Yob2ucLCdcNESG1XZ4GS-q-dWynslGgID6d1gF2YkXMFb7s38PJVHpZSHk-KeevONTIVYqr4Cdo9ki27nKzvoiOiV9-Y6JWHUQ0viIegvUjfwSCqQ55"/></div></div></div></header><main class="w-full pt-20 bg-background min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl">
+<div class="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-primary/10 blur-[100px] pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-24 w-80 h-80 rounded-full bg-tertiary-container/10 blur-[120px] pointer-events-none"></div>
+<div class="max-w-[1400px] mx-auto px-gutter relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-widest mb-space-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Registri Resmi Kebudayaan Disbudpar Kota Salatiga
+          </div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-none mt-2">
+            Pilar Ekosistem &amp; Direktori <span class="text-primary italic font-serif">Sanggar Budaya</span> Salatiga
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-md max-w-2xl">
+            Menghubungkan ruang pembinaan sanggar tradisional, laboratorium seni sekolah vokasi, dan jejaring pentahelix pelestari wayang di 4 kecamatan.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-2 shadow-md hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">domain_add</span>
+            Daftarkan Sanggar Baru
+          </button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 hover:bg-surface-bright transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Buku Induk PDF
+          </button>
+</div>
+</div>
+<!-- Stat Banner Pentahelix -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary/40 group-hover:bg-primary transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Pusat Latihan</span>
+<span class="material-symbols-outlined text-primary text-[20px]">theater_comedy</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-primary font-bold mt-2">8</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sanggar Aktif Terverifikasi</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-tertiary/40 group-hover:bg-tertiary transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Vokasi Seni</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">school</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-tertiary font-bold mt-2">12</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sekolah Mitra Penggerak</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary-fixed-dim/40 group-hover:bg-primary-fixed-dim transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Kurator &amp; Guru</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">person_celebrate</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-primary-fixed-dim font-bold mt-2">14</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maestro Pendamping</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-secondary/40 group-hover:bg-secondary transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Pentahelix Venue</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-secondary font-bold mt-2">18</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mitra Industri &amp; Pariwisata</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container/70 backdrop-blur-md shadow-sm relative overflow-hidden group col-span-2 sm:col-span-1">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-tertiary-container group-hover:bg-tertiary transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Legalitas Daerah</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-tertiary font-bold mt-2">100%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terintegrasi Disbudpar</p>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1400px] mx-auto px-gutter w-full py-space-xl">
+<!-- Category & Filter Tabs -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="categoryFilterBar">
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold shadow-md whitespace-nowrap transition-all" data-filter="all" type="button">
+          Semua Sanggar Pedalangan (8)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-filter="school" type="button">
+          Sekolah Binaan (12)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-filter="council" type="button">
+          Dewan &amp; Asosiasi (PEPADI/DKS)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all" data-filter="partner" type="button">
+          Mitra Venue &amp; Industri
+        </button>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Kecamatan:</span>
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="kecamatanSelect">
+<option value="all">Semua Wilayah Salatiga</option>
+<option value="sidorejo">Kec. Sidorejo</option>
+<option value="tingkir">Kec. Tingkir</option>
+<option value="argomulyo">Kec. Argomulyo</option>
+<option value="sidomukti">Kec. Sidomukti</option>
+</select>
+</div>
+</div>
+<!-- Main Content Layout: Directory Grid (8 Cols) + Mini Map & Sticky Intelligence (4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Sanggar Showcase Cards Column -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg" id="directoryList">
+<!-- Card 1: Sanggar Seni Pedalangan Bima Suci -->
+<article class="sanggar-card bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl" data-category="all sanggar" data-district="sidorejo">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-fixed-dim to-transparent"></div>
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-56 h-52 shrink-0 rounded-lg overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Atmospheric training hall inside Sanggar Seni Pedalangan Bima Suci Salatiga. Traditional Javanese joglo teak wooden pavilion at twilight with warm brass blencong lamp glow, complete slendro pelog gamelan bronze gongs, carved wooden gunungan, and a teenage dalang rehearsing with a leather shadow puppet against the white linen kelir screen. Dark gold, deep indigo tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnPRczuPSCZDqmNNiQRaKFFxqf9oqmYs9IILJiOTjKNxb08ITjj3p5hVrWrllUkVvWaLrWD0ywWqLgiV8H4iLuHutXsw9-HdFcMVukWrZTfNqJvqlwVU5iMU5oBN8sJ-QSAM94uNWrrGbQQEBoj-X8gBGwjqIWY2kQFhfyXC0soTrCXZOMLsVuqn_KLz_J6unooEt-VmiUw6jGo7A8-TZjF8cOfwXMDnQJbngdoUf6l-dXBZOZJR0"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                Sidorejo Lor
+              </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-semibold">
+                  Unggulan Utama PEPADI
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                  ID: SGR-SLTG-001
+                </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold tracking-tight">
+                Sanggar Seni Pedalangan Bima Suci
+              </h2>
+<p class="font-body-sm text-body-sm text-primary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+                Pembina: <span class="font-semibold text-on-surface">Ki Dalang Sutrisno</span> (Maestro Gaya Surakarta)
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 my-space-md py-2 border-y border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Binaan Aktif</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">8 Dalang Muda</span>
+<span class="font-body-sm text-[11px] text-tertiary leading-tight">Termasuk Inaz Fairoza</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spesialisasi</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Gaya Surakarta</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Wayang Kulit Purwa</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jadwal Gladhen</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Sel &amp; Sab Sore</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">15:30 - 20:00 WIB</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Kelir Standar Pentas
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Gamelan Slendro Pelog Lengkap
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Perpustakaan Lakon Klasik
+                </span>
+</div>
+<div class="flex items-center gap-space-sm pt-1 mt-auto">
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-fixed-dim transition-colors shadow-sm" type="button">
+                  Lihat Profil Sanggar
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                  Hubungi Pembina
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Sanggar Karawitan Giri Siswo -->
+<article class="sanggar-card bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl" data-category="all sanggar" data-district="tingkir">
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-56 h-52 shrink-0 rounded-lg overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Lively youth rehearsal at Sanggar Karawitan Giri Siswo in Tingkir Salatiga. Group of teenage boys and young children enthusiastically practicing dynamic pesisiran drumming and juvenile shadow puppetry under soft brass stage spotlights. The background reveals rows of kendang drums, saron instruments, and miniature leather puppets. Deep night aesthetic with golden yellow highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeJ2b1G4JSndlPzfI5ldgtbftIgaRzz2ZlM4kfceQ3ANlIaKsie-a0o_TPzwJDrqTwBBS71D4mnbnjSnoXHwGZA7SXhFo90B4f3IM0X2u1ZIBJ-Hqm24cmXXlUYBJ56AAsRfcdfHKe5lmLak8S6qRiikXIa4hPOTB-GZ0aUly6NBfC_zQIzUvN2MVzE6mF7hhXqqwgVCi1YA_8CwFy-aghcjArFUDA6ls4Wyc_GwvxOrX8fS34CdE"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm">
+                Tingkir Tengah
+              </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-semibold">
+                  Spesialisasi Bocah &amp; Pesisiran
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                  ID: SGR-SLTG-003
+                </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold tracking-tight">
+                Sanggar Karawitan Giri Siswo
+              </h2>
+<p class="font-body-sm text-body-sm text-primary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+                Pembina: <span class="font-semibold text-on-surface">Ki Warsito</span> (Pengrawit Senior &amp; Dalang Bocah)
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 my-space-md py-2 border-y border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Binaan Aktif</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">6 Dalang Remaja</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">+15 Penabuh Muda</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fokus Materi</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Pesisiran &amp; Bocah</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Sabetan Cepat &amp; Kompak</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jadwal Gladhen</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Rabu &amp; Minggu</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">09:00 - 14:00 WIB</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+                Pusat kaderisasi dalang cilik andalan Salatiga sejak 2011. Terkenal dengan kurikulum sabetan dinamis gaya pesisir Jawa Tengah dan modul gending bocah tematik.
+              </p>
+<div class="flex items-center gap-space-sm pt-1 mt-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                  Lihat Profil Sanggar
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                  Hubungi Ki Warsito
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Padepokan Madukara -->
+<article class="sanggar-card bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl" data-category="all sanggar" data-district="argomulyo">
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-56 h-52 shrink-0 rounded-lg overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Traditional vocal training chamber inside Padepokan Madukara Argomulyo Salatiga. Young female sindhen singers in elegant batik and kebaya seated gracefully around an antique wooden gender instrument, learning classical Javanese suluk singing and keprak timing from a female elder maestro. Warm ambient lantern lighting, indigo and gold tones, rich textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrbNvtTBTPgbcNDaKd3t_zPKVralxETF6f71Sx8Eh4MBW1DE8pOc14oLP4cAA26icJ7L11ecv4jBqSs_IeS8r9BD_hosebbWnKofId92JzMn4BZgXYQgsm4pyoSqr08SBhNkpRoVqHhhcs_MVdJ2VLKJ2YJrxY94F_vJpYxvQzHtV1wSrtnOW-DAbW1ax4jtdj1TBuNPOuGugJPJbqTAgRgGcIT1iguDtFkjAXlvBQeXeFE3AlCA"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-tertiary font-label-sm text-label-sm">
+                Argomulyo
+              </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-semibold">
+                  Vokal Sindhen, Keprak &amp; Suluk
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                  ID: SGR-SLTG-007
+                </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold tracking-tight">
+                Padepokan Madukara
+              </h2>
+<p class="font-body-sm text-body-sm text-primary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+                Pembina: <span class="font-semibold text-on-surface">Nyi Cendaniraras</span> (Maestro Suluk &amp; Antawacana)
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 my-space-md py-2 border-y border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fasilitas Inti</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Studio Akustik</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Laras Gender Slendro</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kekhususan</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Vokal &amp; Keprakan</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Pelatihan Suluk Klasik</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jadwal Gladhen</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Kamis &amp; Sabtu</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">19:00 - 22:00 WIB</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+                Pusat pengasahan olah suara, artikulasi antawacana wayang kulit, serta ritme keprakan kaki dalang yang presisi. Padepokan ini menjadi rujukan utama dalang remaja yang ingin memperdalam karakterisasi lakon.
+              </p>
+<div class="flex items-center gap-space-sm pt-1 mt-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                  Lihat Profil Sanggar
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                  Hubungi Nyi Cendaniraras
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Laboratorium Seni Tradisi SMAN 1 Salatiga -->
+<article class="sanggar-card bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl" data-category="school" data-district="sidorejo">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-56 h-52 shrink-0 rounded-lg overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="High school cultural laboratory inside SMAN 1 Salatiga. Modern high-tech heritage studio with students examining digital puppet scanning displays, archive screens, and live stage simulation equipped with traditional wayang leather puppets. Clean educational studio setup, subtle amber glow with dark cyan and brass accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSeUX838fQWFd3fIq10Hs1Lwv-xfkhkGggLLg6iNRCj3T7c-I035cGbB6UFfhkJ_6D1_dWB3xIKUZSAH59l30kjbleJr6DaVOBbWxyQEO7Fs4v_SPyByAaB5ibej8-m84M3x2wvQ_kfLbp_bbi_ALKrgHIUnvL6IO6DcJrOkCyDqDTRz4KrmEpDqktMWAbvQ9-yp5vKajikus5OlZ2P3qaMJCWgT2uwKiP5bqcneB3tbmtRDBiweU"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                SMASA Wayang Lab
+              </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-semibold">
+                  Sekolah Penggerak Budaya
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                  ID: SCH-SLTG-001
+                </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold tracking-tight">
+                Laboratorium Seni Tradisi SMAN 1 Salatiga
+              </h2>
+<p class="font-body-sm text-body-sm text-primary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span>
+                Inkubator Kelahiran Inovasi WAYANG ID
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 my-space-md py-2 border-y border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Siswa Terlibat</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">42 Siswa</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Eskul &amp; Vokasi IT</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inovasi Utama</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Digitalisasi Lakon</span>
+<span class="font-body-sm text-[11px] text-tertiary">Platform WAYANG ID</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fasilitas Lab</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Studio Rekam</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">&amp; Ruang Bedah Naskah</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+                Pusat kolaborasi antarsiswa pecinta kearifan lokal dan teknologi digital. Menghubungkan kurikulum Kurikulum Merdeka Berbasis Seni dengan program magang sanggar maestro di Kota Salatiga.
+              </p>
+<div class="flex items-center gap-space-sm pt-1 mt-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                  Katalog Inovasi Sekolah
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">group_work</span>
+                  Ajukan Kunjungan Lab
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5: SMKN 1 Salatiga Seni Musik Karawitan -->
+<article class="sanggar-card bg-surface-container-low rounded-xl p-space-lg shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-2xl" data-category="school" data-district="sidomukti">
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-56 h-52 shrink-0 rounded-lg overflow-hidden relative shadow-md">
+<img class="w-full h-full object-cover" data-alt="Vocational workshop at SMKN 1 Salatiga musical arts department. Vocational high school students in navy workshop uniforms tuning heavy brass gong instruments and practicing complex multi-rhythmic kendang tempos for wayang accompaniment. Dynamic ambient studio lighting with warm tungsten lamp beams reflecting off polished bronze instruments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAeLUsWSN6z0jCnNGteKgs2zmazW_R6YAv-obsXJQxKsgE41_INpUm7XkIH4IJtJ8xOjeNwNznDnmRz3OmYLtWeRXhA9PldMOTbmiXolvAohp3YZhsaVEbyHcsJXGZ-hqlbVzfzM9_Y6NiuOVGNwXMOyeRppVv8Cm-44lwWdH-BX_ZLzHv5oBR70da-ExFJUfIuyv_o719VqQH2eyIeSRnzyLLuET3c23tIx-H-tRlK-gvzI_PbxI"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-tertiary font-label-sm text-label-sm">
+                Sidomukti
+              </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-semibold">
+                  Vokasi Karawitan &amp; Tata Suara
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+                  ID: SCH-SLTG-004
+                </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold tracking-tight">
+                SMKN 1 Salatiga — Konsentrasi Seni Musik Karawitan
+              </h2>
+<p class="font-body-sm text-body-sm text-primary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">engineering</span>
+                Inkubasi Pengrawit Profesional, Sound Engineer &amp; Dalang Vokasi
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 my-space-md py-2 border-y border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lulusan Tahunan</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">28 Pengrawit</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Sertifikasi BNSP</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mitra Industri</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">8 Production House</span>
+<span class="font-body-sm text-[11px] text-tertiary">Pentas Keliling Jateng</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kapasitas Set</span>
+<span class="font-title-md text-title-md text-primary font-semibold">3 Rancak Gamelan</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Standar Konser Terbuka</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">
+                Menyediakan talenta pengrawit siap pakai bagi pertunjukan wayang malam suntuk maupun ringkas kontemporer. Memiliki laboratorium tata suara panggung tradisional dan aransemen karawitan modern.
+              </p>
+<div class="flex items-center gap-space-sm pt-1 mt-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                  Profil Konsentrasi Keahlian
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+                  Jalin Kemitraan Vokasi
+                </button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Interactive Mini-Map & Pentahelix Node Network -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg sticky top-24">
+<!-- Peta Mini Sebaran Sanggar Salatiga -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Peta Sebaran Sanggar</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary">4 Kecamatan</span>
+</div>
+<!-- Static Map container with data-location -->
+<div class="relative w-full h-64 rounded-lg overflow-hidden shadow-inner mb-space-sm group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-location="Salatiga, Central Java, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZB5qE6FnIjaa0VOqHr6O3cYMg3g_c3cHHp1OpJrMW4gYKt-p9fFiJ-ZkWOGwv5du0qE8IBrgbGtkcrXNOeOgW37JrB5IOQusld1PdlP_P9AWNG8GUc9MK4Nd2o39KrEzcj1dAvY0KYB7VpI3iV-MRV4RiOoXSJnRf8vuxDcAlDFat24_bxuR3hI0gotYY6pDeeiYWirXCKAPdpb2UPWFTMZ99Co70WZX4ALMEmSZRaExcJ10_Qhc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Custom Map Pin Markers -->
+<div class="absolute top-1/4 left-1/3 flex flex-col items-center cursor-pointer group/pin" title="Sanggar Bima Suci (Sidorejo)">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg transform -translate-y-1">
+<span class="material-symbols-outlined text-[14px]">theater_comedy</span>
+</div>
+<span class="font-label-sm text-[9px] bg-surface/90 px-1 rounded text-primary mt-0.5 hidden group-hover/pin:block">Bima Suci</span>
+</div>
+<div class="absolute bottom-1/3 right-1/4 flex flex-col items-center cursor-pointer group/pin" title="Giri Siswo (Tingkir)">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[14px]">music_note</span>
+</div>
+<span class="font-label-sm text-[9px] bg-surface/90 px-1 rounded text-secondary mt-0.5 hidden group-hover/pin:block">Giri Siswo</span>
+</div>
+<div class="absolute bottom-1/4 left-1/4 flex flex-col items-center cursor-pointer group/pin" title="Padepokan Madukara (Argomulyo)">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[14px]">mic</span>
+</div>
+<span class="font-label-sm text-[9px] bg-surface/90 px-1 rounded text-tertiary mt-0.5 hidden group-hover/pin:block">Madukara</span>
+</div>
+<div class="absolute top-1/2 left-1/2 flex flex-col items-center cursor-pointer group/pin" title="SMAN 1 &amp; SMKN 1">
+<div class="w-6 h-6 rounded-full bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center shadow-lg animate-bounce">
+<span class="material-symbols-outlined text-[14px]">school</span>
+</div>
+<span class="font-label-sm text-[9px] bg-surface/90 px-1 rounded text-primary-fixed-dim mt-0.5 hidden group-hover/pin:block">Smasa Lab</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md">Lat: -7.3305, Lon: 110.5084</span>
+<a class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-primary text-on-primary flex items-center gap-1 font-semibold hover:bg-primary-fixed-dim shadow-sm" href="https://maps.google.com/?q=Salatiga" rel="noopener noreferrer" target="_blank">
+                Petunjuk Arah <span class="material-symbols-outlined text-[14px]">directions</span>
+</a>
+</div>
+</div>
+<!-- District Quick Jump -->
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant">
+<div class="p-2 rounded bg-surface-container text-left flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold">Sidorejo</p>
+<p class="font-body-sm text-[11px] text-outline">3 Sanggar • 4 Sekolah</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+</div>
+<div class="p-2 rounded bg-surface-container text-left flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold">Tingkir</p>
+<p class="font-body-sm text-[11px] text-outline">2 Sanggar • 3 Sekolah</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+</div>
+<div class="p-2 rounded bg-surface-container text-left flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold">Argomulyo</p>
+<p class="font-body-sm text-[11px] text-outline">2 Sanggar • 3 Sekolah</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+</div>
+<div class="p-2 rounded bg-surface-container text-left flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold">Sidomukti</p>
+<p class="font-body-sm text-[11px] text-outline">1 Sanggar • 2 Sekolah</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">navigation</span>
+</div>
+</div>
+</div>
+<!-- Profil Asosiasi Pengampu / Dewan Seni -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">account_balance</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Lembaga Kurasi &amp; Pengawas</h3>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<div class="p-2 rounded bg-primary-container/20 text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">PEPADI Komda Kota Salatiga</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pengawas pakem pedalangan, standarisasi lakon, dan akreditasi dalang muda.</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm text-primary font-semibold">Sekretariat: Gedung Kesenian Salatiga</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<div class="p-2 rounded bg-tertiary-container/20 text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Dewan Kesenian Salatiga (DKS)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Komite Seni Tradisi &amp; Teater Rakyat. Fasilitator ruang publik dan festival tahunan.</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm text-tertiary font-semibold">Komite Pedalangan &amp; Karawitan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Program Kolaborasi Sanggar Terpadu -->
+<section class="mt-space-xl pt-space-xl border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm uppercase tracking-widest mb-space-xs">
+            Akselerasi Pentahelix 2025
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Program Kolaborasi Sanggar Terpadu
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+            Sinergi pendanaan daerah, pertukaran instrumen, dan transfer keilmuan antargenerasi secara transparan dan terukur.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          3 Inisiatif Aktif Berjalan
+        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Program 1: Sanggar Berbagi Kelir -->
+<div class="p-space-lg rounded-xl bg-surface-container-low relative overflow-hidden shadow-lg group hover:shadow-2xl transition-all">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">swap_horizontal_circle</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded bg-surface-container text-primary font-semibold">
+            Fasilitas Bergilir
+          </span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-2">
+            Sanggar Berbagi Kelir
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm mb-space-lg">
+            Optimalisasi peminjaman gamelan perunggu slendro pelog, kelir kain belacu 12 meter, dan sound panggung antarsanggar berakreditasi di 4 kecamatan tanpa biaya sewa komersial.
+          </p>
+<div class="pt-space-md border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Terpakai: <span class="text-on-surface font-semibold">24 Sesi / bln</span></span>
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 hover:underline" href="#">
+              Jadwal Kelir <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Program 2: Magang Pentas Maestro -->
+<div class="p-space-lg rounded-xl bg-surface-container-low relative overflow-hidden shadow-lg group hover:shadow-2xl transition-all">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-tertiary/10 group-hover:bg-tertiary/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">workspace_premium</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded bg-surface-container text-tertiary font-semibold">
+            Pendampingan Intim
+          </span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-2">
+            Magang Pentas Maestro
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm mb-space-lg">
+            Penempatan dalang dan pengrawit muda terbaik ke 14 dalang senior saat pentas akbar malam suntuk. Mentee bertugas sebagai asisten dalang, penabuh kendang, atau keprak panggung.
+          </p>
+<div class="pt-space-md border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kuota: <span class="text-on-surface font-semibold">18 Kursi / Kuartal</span></span>
+<a class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1 hover:underline" href="#">
+              Formulir Magang <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Program 3: Dana Stimulan Alat Seni Pemkot -->
+<div class="p-space-lg rounded-xl bg-surface-container-low relative overflow-hidden shadow-lg group hover:shadow-2xl transition-all">
+<div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-secondary/10 group-hover:bg-secondary/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">savings</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded bg-surface-container text-secondary font-semibold">
+            APBD Kebudayaan 2025
+          </span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-2">
+            Stimulan Alat Seni Pemkot
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm mb-space-lg">
+            Hibah renovasi rancakan kendang, tatah sungging wayang kulit, dan pengadaan blencong hemat energi untuk sanggar dan laboratorium sekolah vokasi berbasis proposal kinerja regenerasi.
+          </p>
+<div class="pt-space-md border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Plafon: <span class="text-on-surface font-semibold">Rp 35 Juta / Sanggar</span></span>
+<a class="font-label-md text-label-md text-secondary font-semibold flex items-center gap-1 hover:underline" href="#">
+              Panduan Hibah <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function initDirectoryFilters() {
+    const filterButtons = document.querySelectorAll('#categoryFilterBar .filter-tab');
+    const districtSelect = document.getElementById('kecamatanSelect');
+    const sanggarCards = document.querySelectorAll('.sanggar-card');
+
+    let currentCategory = 'all';
+    let currentDistrict = 'all';
+
+    function updateCardVisibility() {
+      sanggarCards.forEach(card => {
+        const categoryData = card.getAttribute('data-category') || '';
+        const districtData = card.getAttribute('data-district') || '';
+
+        const matchesCategory = (currentCategory === 'all') || categoryData.includes(currentCategory);
+        const matchesDistrict = (currentDistrict === 'all') || (districtData === currentDistrict);
+
+        if (matchesCategory && matchesDistrict) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-all';
+        });
+        btn.className = 'filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold shadow-md whitespace-nowrap transition-all';
+        currentCategory = btn.getAttribute('data-filter') || 'all';
+        updateCardVisibility();
+      });
+    });
+
+    if (districtSelect) {
+      districtSelect.addEventListener('change', (e) => {
+        currentDistrict = e.target.value;
+        updateCardVisibility();
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl"><div class="max-w-[1400px] mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary tracking-tight">WAYANG ID</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-semibold tracking-wide">SALATIGA PRESTIGE</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Panggung digital kurasi dan akselerasi regenerasi seniman pakeliran muda Kota Salatiga. Menghubungkan adi luhung tradisi wayang kulit Nusantara dengan ekosistem pertunjukan kontemporer global.</p><div class="flex items-center gap-space-sm mt-space-xs text-outline"><span class="material-symbols-outlined text-[20px] text-primary">verified</span><span class="font-body-sm text-body-sm text-on-surface-variant">Penetapan Warisan Budaya Takbenda Dunia UNESCO (2003/2008)</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">Navigasi Arsip</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="beranda" href="#">Katalog Lakon Klasik</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="peta-dan-talenta" href="#">Registri Dalang Muda</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="showcase-pagelaran" href="#">Kalender Pentas Salatiga</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="bursa-peluang" href="#">Hibah Riset Pedalangan</a></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">Jejaring Pentahelix</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pemerintah Kota Salatiga</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">PEPADI Komda Salatiga</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Disbudpar Kota Salatiga</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">SMAN 1 Salatiga (Smasa Wayang)</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Sanggar Sarotama &amp; Mitra</a></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">Konservasi &amp; Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Standar Kurasi Sanggar</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Hak Cipta Karawitan</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Protokol Ruwatan</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi Talenta</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant"><span class="font-body-sm text-body-sm">© 2025 WAYANG ID Salatiga. Dikurasi bersama Komda Pepadi &amp; Dewan Kesenian Salatiga.</span><div class="flex items-center gap-space-md font-body-sm text-body-sm"><span class="flex items-center gap-1 text-outline"><span class="material-symbols-outlined text-[16px] text-tertiary">public</span>Warisan Budaya Dunia UNESCO</span><span class="text-outline">|</span><span>Surakarta &amp; Yogyakarta Stylings</span></div></div></div></footer></body></html>
