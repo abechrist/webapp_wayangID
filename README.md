@@ -3,6 +3,7 @@
 > **Panggung Digital Kurasi, Paspor Seni, dan Akselerasi Regenerasi Seniman Pakeliran Muda Kota Salatiga**  
 > Menghubungkan adi luhung tradisi wayang kulit Nusantara dengan ekosistem pertunjukan kontemporer global melalui model Pentahelix.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-wayangid.appwrite.network-ffd56d?logo=appwrite)](https://wayangid.appwrite.network)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript)](https://www.typescriptlang.org/)
