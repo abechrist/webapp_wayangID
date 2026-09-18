@@ -8,7 +8,7 @@
 
 import { Client, Databases, Storage, ID, Permission, Role } from "node-appwrite";
 
-const ENDPOINT = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || "https://cloud.appwrite.io/v1";
+const ENDPOINT = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || "https://sgp.cloud.appwrite.io/v1";
 const PROJECT_ID = process.env.NEXT_PUBLIC_APPWRITE_PROJECT || "6aad4f19003a342d8e87";
 const DATABASE_ID = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID || "wayangdb";
 
