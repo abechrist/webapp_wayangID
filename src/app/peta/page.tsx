@@ -25,7 +25,7 @@ export default function PetaPage() {
   const [sanggit, setSanggit] = useState(true);
   const [suluk, setSuluk] = useState(true);
   const [verifiedOnly, setVerifiedOnly] = useState(false);
-  const [selectedTalent, setSelectedTalent] = useState<Talent>(talents[0]);
+  const [selectedTalent, setSelectedTalent] = useState<Talent | null>(null);
 
   const filtered = talents.filter((t) => {
     const q = search.toLowerCase();
@@ -180,49 +180,85 @@ export default function PetaPage() {
         <section className="max-w-7xl mx-auto px-gutter py-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             <div className="lg:col-span-7 flex flex-col gap-3 lg:sticky lg:top-28">
-              <div className="relative w-full aspect-[4/3] md:aspect-[16/11] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30">
+              <div className="relative w-full h-[400px] sm:h-[460px] md:h-[500px] lg:h-[540px] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30">
                 <InteractiveMap
                   filteredTalents={filtered}
                   onSelectTalent={(t) => setSelectedTalent(t)}
-                  selectedTalentId={selectedTalent.id}
+                  selectedTalentId={selectedTalent?.id}
                 />
 
-                <div className="absolute top-4 left-4 z-20 flex flex-col gap-1 bg-surface-container-low/90 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-lg border border-outline-variant/20 pointer-events-none">
-                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-                    <span className="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse" /> Peta Interaktif Salatiga
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex flex-col gap-0.5 sm:gap-1 bg-surface-container-low/90 backdrop-blur-md px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl shadow-lg border border-outline-variant/20 pointer-events-none">
+                  <span className="flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary">
+                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-tertiary animate-pulse" /> Peta Interaktif Salatiga
                   </span>
-                  <span className="text-xs text-on-surface-variant">Koordinat: 7.3305° S, 110.5084° E • 4 Kecamatan</span>
+                  <span className="text-[10px] sm:text-xs text-on-surface-variant">Koordinat: 7.3305° S, 110.5084° E • 4 Kecamatan</span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 z-20 p-3 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl shadow-2xl border border-outline-variant/20">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <Image
-                        src={selectedTalent.photo}
-                        alt={selectedTalent.name}
-                        width={48}
-                        height={48}
-                        unoptimized
-                        className="w-12 h-12 rounded-xl object-cover ring-2 ring-primary shrink-0"
-                      />
-                      <div className="flex flex-col min-w-0">
-                        <span className="flex items-center gap-1.5 text-sm font-bold text-on-surface truncate">
-                          {selectedTalent.name} {selectedTalent.verified && <span className="material-symbols-outlined text-tertiary text-[16px]">verified</span>}
-                        </span>
-                        <span className="text-xs text-primary-fixed truncate">Sanggar {selectedTalent.sanggar} ({selectedTalent.kecamatan}) • Gaya {selectedTalent.style}</span>
-                        <span className="text-xs text-on-surface-variant">{selectedTalent.performances} Pagelaran Mandiri • {selectedTalent.school}</span>
+                {selectedTalent ? (
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-20 p-3 sm:p-4 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl shadow-2xl border border-primary/30 animate-in fade-in slide-in-from-bottom-2 duration-150">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <Image
+                          src={selectedTalent.photo}
+                          alt={selectedTalent.name}
+                          width={44}
+                          height={44}
+                          unoptimized
+                          className="w-11 h-11 rounded-xl object-cover ring-2 ring-primary shrink-0"
+                        />
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5 truncate">
+                            <span className="text-sm font-bold text-on-surface truncate">
+                              {selectedTalent.name}
+                            </span>
+                            {selectedTalent.verified && (
+                              <span className="material-symbols-outlined text-tertiary text-[16px] shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                verified
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-xs text-primary truncate">
+                            Sanggar {selectedTalent.sanggar} ({selectedTalent.kecamatan}) • Gaya {selectedTalent.style}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <Link href={`/talent/${selectedTalent.wayangId}`} className="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-medium hover:bg-surface-variant border border-outline-variant/20">
-                        Profil Lengkap
-                      </Link>
-                      <button className="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container text-xs font-semibold flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[14px]">send</span> Hubungi Sanggar
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedTalent(null);
+                        }}
+                        className="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors shrink-0 border border-outline-variant/30 cursor-pointer"
+                        title="Tutup detail modal"
+                        aria-label="Tutup detail modal"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">close</span>
                       </button>
                     </div>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-outline-variant/15 text-xs">
+                      <span className="text-[11px] text-on-surface-variant truncate">
+                        {selectedTalent.performances} Pagelaran Mandiri • {selectedTalent.school}
+                      </span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Link
+                          href={`/talent/${selectedTalent.wayangId}`}
+                          className="flex-1 sm:flex-none text-center px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-medium hover:bg-surface-variant border border-outline-variant/20 transition-colors"
+                        >
+                          Profil Lengkap
+                        </Link>
+                        <button className="flex-1 sm:flex-none justify-center px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container text-xs font-semibold flex items-center gap-1 hover:brightness-110 transition-colors">
+                          <span className="material-symbols-outlined text-[14px]">send</span> Hubungi Sanggar
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="absolute bottom-3 left-3 right-3 sm:left-4 sm:right-auto z-20 px-3.5 py-2 rounded-xl bg-surface-container-low/90 backdrop-blur-md shadow-lg border border-outline-variant/20 pointer-events-none text-xs text-on-surface-variant flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-[16px]">touch_app</span>
+                    <span className="text-[11px] sm:text-xs">Klik penanda <span className="text-primary font-bold">🪆</span> di peta untuk profil dalang</span>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 bg-surface-container-low rounded-xl text-on-surface-variant border border-outline-variant/20">
@@ -244,59 +280,62 @@ export default function PetaPage() {
                 <span className="text-xs text-on-surface-variant flex items-center gap-1">Urutkan: <span className="text-primary font-semibold flex items-center">Relevansi <span className="material-symbols-outlined text-[14px]">arrow_drop_down</span></span></span>
               </div>
 
-              {roster.map((t, idx) => (
-                <article
-                  key={t.id}
-                  onClick={() => setSelectedTalent(t)}
-                  className={`cursor-pointer ${t.id === selectedTalent.id ? "bg-surface-container-high shadow-xl border-primary" : "bg-surface-container border-outline-variant/20"} rounded-2xl p-4 shadow-md border hover:border-primary/40 transition-all`}
-                >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src={t.photo}
-                        alt={t.name}
-                        width={56}
-                        height={56}
-                        unoptimized
-                        className="w-14 h-14 rounded-2xl object-cover shrink-0"
-                      />
-                      <div className="flex flex-col min-w-0">
-                        <span className="flex items-center gap-1.5 text-sm font-bold truncate">
-                          <span className={t.id === selectedTalent.id ? "text-primary" : "text-on-surface"}>{t.name}</span>
-                          {t.verified && <span className="material-symbols-outlined text-tertiary text-[18px]">verified</span>}
-                        </span>
-                        <span className="text-xs text-on-surface-variant font-mono">{t.wayangId} • {t.age} Th</span>
-                        <span className="text-xs text-on-surface truncate">{t.sanggar} • {t.kecamatan}</span>
-                      </div>
-                    </div>
-                    <span className={`px-2.5 py-1 rounded-full text-xs font-medium shrink-0 ${idx === 0 ? "bg-primary/10 text-primary border border-primary/20" : "bg-surface-container-high text-on-surface border border-outline-variant/20"}`}>{t.style}</span>
-                  </div>
-                  <div className="space-y-2 bg-surface-container-lowest/60 p-3 rounded-xl">
-                    {t.skills.map((s) => (
-                      <div key={s.name} className="space-y-1">
-                        <div className="flex justify-between text-xs text-on-surface-variant">
-                          <span>{s.name}</span>
-                          <span className={`font-bold ${s.name === "Sabet" ? "text-primary" : s.name === "Sanggit" ? "text-tertiary" : "text-secondary"}`}>{s.level}%</span>
-                        </div>
-                        <div className="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden">
-                          <div className={`h-full rounded-full ${s.name === "Sabet" ? "bg-primary" : s.name === "Sanggit" ? "bg-tertiary" : "bg-secondary"}`} style={{ width: `${s.level}%` }} />
+              {roster.map((t, idx) => {
+                const isSelected = selectedTalent?.id === t.id;
+                return (
+                  <article
+                    key={t.id}
+                    onClick={() => setSelectedTalent((prev) => prev?.id === t.id ? null : t)}
+                    className={`cursor-pointer ${isSelected ? "bg-surface-container-high shadow-xl border-primary" : "bg-surface-container border-outline-variant/20"} rounded-2xl p-4 shadow-md border hover:border-primary/40 transition-all`}
+                  >
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <div className="flex items-center gap-3">
+                        <Image
+                          src={t.photo}
+                          alt={t.name}
+                          width={56}
+                          height={56}
+                          unoptimized
+                          className="w-14 h-14 rounded-2xl object-cover shrink-0"
+                        />
+                        <div className="flex flex-col min-w-0">
+                          <span className="flex items-center gap-1.5 text-sm font-bold truncate">
+                            <span className={isSelected ? "text-primary" : "text-on-surface"}>{t.name}</span>
+                            {t.verified && <span className="material-symbols-outlined text-tertiary text-[18px]">verified</span>}
+                          </span>
+                          <span className="text-xs text-on-surface-variant font-mono">{t.wayangId} • {t.age} Th</span>
+                          <span className="text-xs text-on-surface truncate">{t.sanggar} • {t.kecamatan}</span>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between pt-3 mt-1">
-                    <span className="text-xs text-on-surface-variant flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[16px] text-primary">theater_comedy</span> {t.performances} Lakon Dipentaskan
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <Link href={`/talent/${t.wayangId}`} className="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-xs border border-outline-variant/20 transition-colors">Lihat Paspor</Link>
-                      <button className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 ${t.id === selectedTalent.id ? "bg-primary text-on-primary hover:brightness-110" : "bg-primary-container text-on-primary-container hover:brightness-110"}`}>
-                        <span className="material-symbols-outlined text-[14px]">handshake</span> Ajak Kolaborasi
-                      </button>
+                      <span className={`px-2.5 py-1 rounded-full text-xs font-medium shrink-0 ${idx === 0 ? "bg-primary/10 text-primary border border-primary/20" : "bg-surface-container-high text-on-surface border border-outline-variant/20"}`}>{t.style}</span>
                     </div>
-                  </div>
-                </article>
-              ))}
+                    <div className="space-y-2 bg-surface-container-lowest/60 p-3 rounded-xl">
+                      {t.skills.map((s) => (
+                        <div key={s.name} className="space-y-1">
+                          <div className="flex justify-between text-xs text-on-surface-variant">
+                            <span>{s.name}</span>
+                            <span className={`font-bold ${s.name === "Sabet" ? "text-primary" : s.name === "Sanggit" ? "text-tertiary" : "text-secondary"}`}>{s.level}%</span>
+                          </div>
+                          <div className="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden">
+                            <div className={`h-full rounded-full ${s.name === "Sabet" ? "bg-primary" : s.name === "Sanggit" ? "bg-tertiary" : "bg-secondary"}`} style={{ width: `${s.level}%` }} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between pt-3 mt-1">
+                      <span className="text-xs text-on-surface-variant flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[16px] text-primary">theater_comedy</span> {t.performances} Lakon Dipentaskan
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <Link href={`/talent/${t.wayangId}`} className="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-xs border border-outline-variant/20 transition-colors">Lihat Paspor</Link>
+                        <button className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 ${isSelected ? "bg-primary text-on-primary hover:brightness-110" : "bg-primary-container text-on-primary-container hover:brightness-110"}`}>
+                          <span className="material-symbols-outlined text-[14px]">handshake</span> Ajak Kolaborasi
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
 
               {roster.length === 0 && (
                 <div className="rounded-2xl bg-surface-container border border-outline-variant/20 p-8 text-center text-sm text-on-surface-variant">Tidak ada talenta yang cocok dengan filter.</div>
