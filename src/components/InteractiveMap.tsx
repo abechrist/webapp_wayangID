@@ -6,8 +6,8 @@ import { sanggars, Talent } from "@/data/demo";
 
 interface InteractiveMapProps {
   filteredTalents: Talent[];
-  onSelectTalent: (talent: Talent) => void;
-  selectedTalentId?: string;
+  onSelectTalent: (talent: Talent | null) => void;
+  selectedTalentId?: string | null;
 }
 
 export default function InteractiveMap({
@@ -38,6 +38,11 @@ export default function InteractiveMap({
       }).addTo(map);
 
       L.control.zoom({ position: "topright" }).addTo(map);
+
+      // Deselect when clicking empty space on the map
+      map.on("click", () => {
+        onSelectTalent(null);
+      });
 
       const markersGroup = L.layerGroup().addTo(map);
       markersLayerRef.current = markersGroup;
@@ -105,7 +110,8 @@ export default function InteractiveMap({
       });
 
       const marker = L.marker([t.lat, t.lng], { icon: talentIcon });
-      marker.on("click", () => {
+      marker.on("click", (e: L.LeafletMouseEvent) => {
+        L.DomEvent.stopPropagation(e);
         onSelectTalent(t);
         map.panTo([t.lat, t.lng]);
       });
@@ -121,8 +127,6 @@ export default function InteractiveMap({
   }, [filteredTalents, onSelectTalent, selectedTalentId]);
 
   return (
-    <div className="relative w-full h-full min-h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30">
-      <div ref={mapContainerRef} className="w-full h-full min-h-[420px] z-0" />
-    </div>
+    <div ref={mapContainerRef} className="w-full h-full min-h-[380px] z-0" />
   );
 }
