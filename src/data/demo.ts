@@ -5,6 +5,7 @@ export type Talent = {
   wayangId: string;
   name: string;
   age: number;
+  gender: "putra" | "putri";
   style: "Surakarta" | "Yogyakarta" | "Pesisiran";
   photo: string;
   school: string;
@@ -26,6 +27,7 @@ export const talents: Talent[] = [
     wayangId: "WID-2026-0001",
     name: "Inaz Fairoza Rizqillah",
     age: 17,
+    gender: "putri",
     style: "Surakarta",
     photo: stitchImages.inazPortrait,
     school: "MAN Salatiga",
@@ -49,6 +51,7 @@ export const talents: Talent[] = [
     wayangId: "WID-2026-0004",
     name: "Bagas Wicaksono",
     age: 17,
+    gender: "putra",
     style: "Pesisiran",
     photo: stitchImages.bagasAvatar,
     school: "SMKN 1 Salatiga",
@@ -72,6 +75,7 @@ export const talents: Talent[] = [
     wayangId: "WID-2026-0007",
     name: "Sekar Ayu Kinanti",
     age: 21,
+    gender: "putri",
     style: "Yogyakarta",
     photo: stitchImages.sekarProfile,
     school: "ISI Surakarta",
@@ -95,6 +99,7 @@ export const talents: Talent[] = [
     wayangId: "WID-2026-0012",
     name: "Anom Danang",
     age: 19,
+    gender: "putra",
     style: "Surakarta",
     photo: stitchImages.anomMale,
     school: "SMA 2 Salatiga",
@@ -117,6 +122,7 @@ export const talents: Talent[] = [
     wayangId: "WID-2026-0015",
     name: "Bayu Aji Pramono",
     age: 20,
+    gender: "putra",
     style: "Surakarta",
     photo: stitchImages.bayuMale,
     school: "Universitas Sebelas Maret",
