@@ -134,7 +134,7 @@ export default async function TalentPassportPage({ params }: { params: Promise<{
                           Grade A
                         </span>
                         <span className="text-[11px] text-on-surface-variant truncate">
-                          {talent.name.includes("Inaz") ? "Dalang Remaja Putri" : "Dalang Muda Salatiga"}
+                          {talent.gender === "putri" ? "Dalang Remaja Putri" : "Dalang Remaja Putra"}
                         </span>
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default async function TalentPassportPage({ params }: { params: Promise<{
               <div className="lg:col-span-8 flex flex-col gap-3">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary-fixed-dim text-xs font-semibold flex items-center gap-1 border border-tertiary/20">
-                    <span className="material-symbols-outlined text-sm">stars</span> Pelopor Dalang Putri Muda — {talent.age}th {talent.wayangId} Gagrak {talent.style} Grade A PEPADI
+                    <span className="material-symbols-outlined text-sm">stars</span> {talent.gender === "putri" ? "Pelopor Dalang Putri Muda" : "Pelopor Dalang Putra Muda"} — {talent.age}th {talent.wayangId} Gagrak {talent.style} Grade A PEPADI
                   </span>
                   <span className="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs">{talent.school}</span>
                   {privacy.isMinor && (
@@ -169,7 +169,9 @@ export default async function TalentPassportPage({ params }: { params: Promise<{
                   <div className="col-span-2 sm:col-span-1 bg-surface-container p-3 rounded-xl flex flex-col border border-outline-variant/20">
                     <span className="text-xs text-outline">Gaya Pedalangan</span>
                     <span className="text-sm font-semibold text-on-surface truncate">Gaya {talent.style}</span>
-                    <span className="text-xs text-on-surface-variant">Mangkunegaran &amp; Kasunanan</span>
+                    <span className="text-xs text-on-surface-variant">
+                      {talent.style === "Surakarta" ? "Mangkunegaran & Kasunanan" : talent.style === "Yogyakarta" ? "Kasultanan & Pakualaman" : "Pesisiran & Gagrak Anyar"}
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-2 pt-1">
