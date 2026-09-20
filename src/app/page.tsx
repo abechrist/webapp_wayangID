@@ -332,7 +332,7 @@ export default function BerandaPage() {
               </h2>
               <p className="text-on-surface-variant text-sm max-w-lg">Kolaborasi 5 pilar: Pemkot — Sanggar — Sekolah — Mentor — Dalang Muda. Bersama membangun jejaring budaya berkelanjutan.</p>
               <div className="flex flex-wrap gap-2 mt-2">
-                {["Pemkot Salatiga", "PEPADI", "SMAN 1", "Giri Siswo", "Dewan Kesenian"].map((b) => (
+                {["Pemkot Salatiga", "PEPADI", "MAN/SMA/SMK", "Giri Siswo", "Dewan Kesenian"].map((b) => (
                   <span key={b} className="text-xs px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface">
                     {b}
                   </span>
